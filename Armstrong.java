@@ -1,29 +1,27 @@
+//if a given number can be represnted as the sum of cubes of its digits then its armstrong numbers
 class Armstrong
 {
 	public static void func(int num)
 	{
-		int num1=num;
-		int count=0;
-
-		while(num!=0)
-		{
-			count++;
-			num=num/10;
-		}	int [] a=new int[count];
-		for(int i=0;i<count;i++)
-		{
-			
-			int get=num1%10;
-			a[i]=get;
-			num1=num1/10;
-		}
-		for(int x1:a)
-		{
-			System.out.println(a[x1]);
-		}
+		int temp1=num;
+		int last=0,sum=0,cube=0;
+		while(temp1!=0)
+			{
+				last=temp1%10;
+				cube=last*last*last;
+				sum+=cube;
+				temp1=temp1/10;
+			}
+			if(num==sum)
+			{
+				System.out.println(num +" is an armstrong");
+			}
+			else 
+				{
+				System.out.println(num +" is  not an armstrong");
+			}
 	}
-	public static void main(String[] args)
-	 {
-		func(12);
+	public static void main(String[] args) {
+		func(1530);
 	}
 }
