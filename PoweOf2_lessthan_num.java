@@ -8,7 +8,7 @@ class Powerof2_lessthan_num
 		int res=1;
 		for(int i=1;i<num;i++)
 		{
-			res=res*2;
+			res*=2;
 			if(res>num)
 			break;
 		}
